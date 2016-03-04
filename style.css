@@ -4,12 +4,19 @@ html {
 body{ padding: 0px; margin: 0px; }
 
 .container {
-
 	border: 1px solid #555;
 	background: #222;
 
 }
 
+
+.scene {
+	width: 1000px;
+	min-height: 500px;
+	position: relative;
+	overflow: hidden;
+	margin: 200px auto ;
+}
 
 
 .bk-brownstones {
@@ -19,23 +26,27 @@ body{ padding: 0px; margin: 0px; }
 	transform: translateZ(0);
 	backface-visibility: hidden;
 	perspective: 1000;
-	animation: bk 10s -5s linear infinite;
+	animation: bk 20s -5s linear infinite;
 }
 
 
 .fore {
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/fore.svg");
+  background: url("tree_foreground_layer/foreground.svg");
   transform: translateZ(0);
-  height: 300px;
-  animation: bk 7s -5s linear infinite;
+  height: 900px;
+
+  animation: fore 40s -5s linear infinite;
 }
 
-.fore {
-	transform: translateY(300px);
-}
+
 
 @keyframes bk {
 	100% {
 		background-position: -1000px 0;
+	}
+}
+@keyframes fore {
+	100% {
+		background-position: -4800px 0;
 	}
 }
