@@ -1,0 +1,41 @@
+html {
+	background: #333;
+}
+body{ padding: 0px; margin: 0px; }
+
+.container {
+
+	border: 1px solid #555;
+	background: #222;
+
+}
+
+
+
+.bk-brownstones {
+	background: url("brownstone_layer/background.svg");
+	background-color: white;
+	height: 500px;
+	transform: translateZ(0);
+	backface-visibility: hidden;
+	perspective: 1000;
+	animation: bk 10s -5s linear infinite;
+}
+
+
+.fore {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/28963/fore.svg");
+  transform: translateZ(0);
+  height: 300px;
+  animation: bk 7s -5s linear infinite;
+}
+
+.fore {
+	transform: translateY(300px);
+}
+
+@keyframes bk {
+	100% {
+		background-position: -1000px 0;
+	}
+}
